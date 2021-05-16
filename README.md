@@ -22,10 +22,17 @@ Comparison
 ------
 
 ![](Fig1.png)
-Fig1. The Fmax of different optimization modes
+<p align="center">
+    Fig1. The Fmax of different optimization modes
+</p>
+
 
 ![](Fig2.png)
-Fig2. Overall comparison of different AES designs
+<p align="center">
+    Fig2. Overall comparison of different AES designs
+</p>
 
 ![](Fig3.png)
-Fig3. The max throughput comparison after aligning resource utilization
+<p align="center">
+    Fig3. The max throughput comparison after aligning resource utilization
+</p>
