@@ -1,5 +1,5 @@
 # A Compact AES-128 Design
-This design demonstrates Bitcoin mining using Intel Arria 10 SoC FPGA. The ARM processor reads block information given by user and completes a pre-computing of hash. The FPGA receives init data and finishes rest of computation with all possible nonces to produce hash blocks. For simplicity any produced block has 32-bit leading zeros is considered to be valid therefore the corresponding nonce will be collected and sent back to processor. The FPGA contains 7 fully pipelined computing engines and is able to complete job in less than 4 seconds.
+The table shows different design architectures of AES-128 and introduces a very compact and highly area optimization design which can provide a very high computation throughput over a traditional pipelined architecture.
 <br/>
 <br/>
 
@@ -20,12 +20,12 @@ Platform
 
 Comparison
 ------
-![](Fig1.png)
 
-xxxx
+![](Fig1.png)
+Fig1. The Fmax of different optimization modes
 
 ![](Fig2.png)
-yyyy
+Fig2. Overall comparison of different AES designs
 
 ![](Fig3.png)
-zzzz
+Fig3. The max throughput comparison after aligning resource utilization
