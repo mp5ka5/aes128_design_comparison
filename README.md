@@ -27,11 +27,12 @@ Comparison
 ------
 Here is a quick shot to show all design sizes and Fmax values after applying different optimization efforts. 
 Normally, the decryption design is more complicated than the encryption one so the size is larger and the Fmax is lower. Notice the compilation effort of "Best Performance" does not always guarantee the best Fmax.
+<br/>
 ![](Fig1.png)
 <p align="center">
     Fig1. The Fmax of different optimization modes
 </p>
-
+<br/>
 
 The *aes_inv_cipher_top* and *aes_cipher_top* are open source from website. 
 
@@ -41,12 +42,15 @@ The *Aes128DecPipe* is a fully pipelined architecture for decryption computation
 
 The *Aes128EnDeV2* is a design trying to merge encryption and decryption into one design so many resource can be shared somehow. 
 
-
+<br/>
 ![](Fig2.png)
 <p align="center">
     Fig2. Overall comparison of different AES designs
 </p>
+<br/>
 
+zzzzzzzzzzzzzzzzzzzzzz
+<br/>
 ![](Fig3.png)
 <p align="center">
     Fig3. The max throughput comparison after aligning resource utilization
