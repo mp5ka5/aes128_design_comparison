@@ -13,6 +13,7 @@ Development Tool
 ------
 Intel Quartus Prime Standard 18.1
 <br/>
+<br/>
 
 Platform
 ------
@@ -41,7 +42,6 @@ The *Aes128Word* runs enryption flow and most operations inside uses 32-bit data
 The *Aes128DecPipe* is a fully pipelined architecture for decryption computation. This design can pop one plaintext per clock after pipe is filled so the throughput is the best and the size is much larger than others.
 
 The *Aes128EnDeV2* is a design trying to merge encryption and decryption into one design so many resource can be shared somehow. 
-
 <br/>
 ![](Fig2.png)
 <p align="center">
@@ -50,8 +50,11 @@ The *Aes128EnDeV2* is a design trying to merge encryption and decryption into on
 <br/>
 
 zzzzzzzzzzzzzzzzzzzzzz
+
+dddddddddddddddddddddddddd
 <br/>
 ![](Fig3.png)
 <p align="center">
     Fig3. The max throughput comparison after aligning resource utilization
 </p>
+
