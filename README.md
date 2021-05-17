@@ -1,5 +1,5 @@
 # A Compact AES-128 Design
-The table shows different design architectures of AES-128 and introduces a very compact and highly area optimization design which can provide a very high computation throughput over a traditional pipelined architecture.
+The table shows different design architectures of AES-128. Each strategy has its pros and cons. Correclty merging these advantages can build a very compact design offering extremely high throughput over a traditional pipelined architecture.
 <br/>
 <br/>
 
@@ -37,11 +37,11 @@ Normally the decryption architecture is more complicated than the encryption one
 
 The *aes_inv_cipher_top* and *aes_cipher_top* are open source from website. 
 
-The *Aes128Word* runs enryption flow and most operations inside uses 32-bit data, not the full 128-bit data. The strategy to reduce design size does not provide a good result. This Fmax has no improvement.
+The *Aes128Word* runs enryption flow and most operations inside uses 32-bit data, not the full 128-bit data. The strategy to reduce size does not come out a good result and the Fmax has no improvement.
 
-The *Aes128DecPipe* is a fully pipelined architecture for decryption which means the throughput is the best and the size is much larger than others.
+The *Aes128DecPipe* is a pipelined architecture for decryption which targets to create the max throughput.
 
-The *Aes128EnDeV2* is a design trying to merge encryption and decryption in one therefore some resource can be shared. Some architecture improvement of modules results a very long computing cycle. Low Fmax and long cycles comes out the worst performance.
+The *Aes128EnDeV2* merges encryption and decryption in one design therefore resources can be shared. Some architecture improvement extends the computing cycle. Low Fmax and long cycle comes out the worst performance.
 
 The *ProcElemAes128V3* combines pros of previos designs and targets to be the most compact AES module. Though the computing cycle is long, the size is extremely small and is capable to be executed at very high clock rate. 
 <br/>
@@ -51,7 +51,7 @@ The *ProcElemAes128V3* combines pros of previos designs and targets to be the mo
 </p>
 <br/>
 
-To compare the performance, assuming 26% utilization for all designs concludes the *ProcElemAes128V3* can provide computing power over 4G blocks per sec. This is a extremely high performance on a 28nm FPGA.
+To compare the performance, assuming 26% utilization for all designs concludes the *ProcElemAes128V3* can provide computing power over 4G blocks per sec. This is an extremely high performance on a 28nm FPGA.
 <br/>
 ![](Fig3.png)
 <p align="center">
