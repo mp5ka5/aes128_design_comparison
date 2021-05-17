@@ -27,7 +27,7 @@ Platform
 Comparison
 ------
 Here is a quick shot to show all design sizes and Fmax values after applying different optimization efforts. 
-Normally, the decryption design is more complicated than the encryption one so the size is larger and the Fmax is lower. Notice the compilation effort of "Best Performance" does not always guarantee the best Fmax.
+Normally the decryption architecture is more complicated than the encryption one so the size is larger and the Fmax is lower. Notice the "Best Performance" compilation effort does not always guarantee the best Fmax result.
 <br/>
 ![](Fig1.png)
 <p align="center">
@@ -37,11 +37,13 @@ Normally, the decryption design is more complicated than the encryption one so t
 
 The *aes_inv_cipher_top* and *aes_cipher_top* are open source from website. 
 
-The *Aes128Word* runs enryption flow and most operations inside uses 32-bit data, not the full 128-bit data. Since the input/output data is limited to only 32 bits, it requires more clock cycles to load key and plaintext and requires some cycles to output a full ciphertext. The strategy to reduce design size by this little change with a pre-computed input does not provide a good result. This Fmax does not improve as well.
+The *Aes128Word* runs enryption flow and most operations inside uses 32-bit data, not the full 128-bit data. The strategy to reduce design size does not provide a good result. This Fmax has no improvement.
 
-The *Aes128DecPipe* is a fully pipelined architecture for decryption computation. This design can pop one plaintext per clock after pipe is filled so the throughput is the best and the size is much larger than others.
+The *Aes128DecPipe* is a fully pipelined architecture for decryption which means the throughput is the best and the size is much larger than others.
 
-The *Aes128EnDeV2* is a design trying to merge encryption and decryption into one design so many resource can be shared somehow. 
+The *Aes128EnDeV2* is a design trying to merge encryption and decryption in one therefore some resource can be shared. Some architecture improvement of modules results a very long computing cycle. Low Fmax and long cycles comes out the worst performance.
+
+The *ProcElemAes128V3* combines pros of previos designs and targets to be the most compact AES module. Though the computing cycle is long, the size is extremely small and is capable to be executed at very high clock rate. 
 <br/>
 ![](Fig2.png)
 <p align="center">
@@ -49,9 +51,7 @@ The *Aes128EnDeV2* is a design trying to merge encryption and decryption into on
 </p>
 <br/>
 
-zzzzzzzzzzzzzzzzzzzzzz
-
-dddddddddddddddddddddddddd
+To compare the performance, assuming 26% utilization for all designs concludes the *ProcElemAes128V3* can provide computing power over 4G blocks per sec. This is a extremely high performance on a 28nm FPGA.
 <br/>
 ![](Fig3.png)
 <p align="center">
