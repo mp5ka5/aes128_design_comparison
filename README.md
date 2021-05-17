@@ -1,5 +1,5 @@
 # A Compact AES-128 Design
-The table shows different design architectures of AES-128. Each strategy has its pros and cons. Correclty merging these advantages can build a very compact design offering extremely high throughput over a traditional pipelined architecture.
+Comparing different design architectures of AES-128 to show pros and cons of each strategy. Correclty merging these advantages can build a very compact design offering extremely high throughput over a traditional pipelined architecture.
 <br/>
 <br/>
 
@@ -51,7 +51,7 @@ The *ProcElemAes128V3* combines pros of previos designs and targets to be the mo
 </p>
 <br/>
 
-To compare the performance, assuming 26% utilization for all designs concludes the *ProcElemAes128V3* can provide computing power over 4G blocks per sec. This is an extremely high performance on a 28nm FPGA.
+To compare the performance, assuming 26% utilization for all designs concludes the *ProcElemAes128V3* can provide computing power over 4G blocks per sec which is an extremely high performance on a 28nm FPGA.
 <br/>
 ![](Fig3.png)
 <p align="center">
